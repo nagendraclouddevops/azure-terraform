@@ -1,7 +1,5 @@
-*** Azure-terraform***
-
-                                            ```session -1:```
-### 1. what is terraform?
+**Azure-Terraform**
+### **1. what is terraform?**
 * Terraform is an open-source infrastructure as code (IaC) tool developed by HashiCorp. It allows developers and operations teams to define and manage infrastructure as code using a declarative language. With Terraform, you can define infrastructure resources such as servers, networks, storage, and other components required to run applications in the cloud or on-premises.
 
 * Terraform works by defining infrastructure resources in a configuration file, which is then used to create, update, or delete the resources in a cloud provider or on-premises environment. It uses a state file to keep track of the current infrastructure state and changes made to it.
@@ -12,26 +10,8 @@
 
 * Overall, Terraform is a powerful tool that helps organizations achieve greater agility and efficiency by automating infrastructure management and reducing manual errors.
 
-**TERRAFROM SETUP:**
 
-Below is the environment setup.
-
-**Softwares Required:**
-
-* VS Code
-* Terraform
-* AWS CLI V2 or AZURE CLI
-
-**Steps:**
-
-* Create IAM administrator user. Copy the access key and secret key. Don't push to any GitHub or internet.
-* Configure user in your laptop using
-```
-aws configure
-```
-* Add the terraform path to system variables.
-
-###  **Why Terraform** <br />
+###  **2.Why Terraform** <br />
 
 Terraform is popular IaC (Infrastructure as a Code) tool. It is best in the market now.
 
@@ -67,7 +47,32 @@ Terraform is popular IaC (Infrastructure as a Code) tool. It is best in the mark
 
 
 
-                                    #### Terraform Commands
+**TERRAFROM SETUP:**
+
+        Below is the environment setup.
+
+**Softwares Required:**
+
+* VS Code
+* Terraform: Download from here https://releases.hashicorp.com/terraform/1.4.6/terraform_1.4.6_windows_386.zip
+* AWS CLI V2: https://releases.hashicorp.com/terraform/1.4.6/terraform_1.4.6_windows_386.zip
+* AZURE CLI : https://releases.hashicorp.com/terraform/1.4.6/terraform_1.4.6_windows_386.zip
+
+**For AWS Steps:**
+
+* Create IAM administrator user. Copy the access key and secret key. Don't push to any GitHub or internet.
+* Configure user in your laptop using
+```
+aws configure
+```
+* Add the terraform path to system variables.
+
+**For Azure env setup**
+
+    * terraform file location paste in environment variables
+    * install az-cli and login to azure using `az -login`.
+
+**Terraform Commands**
 
 * First command is to initialize the terraform, at this stage terraform downloads the provider into .terraform folder.
 
@@ -86,3 +91,5 @@ terraform plan
 ```
 terraform apply
 ```
+
+* Providers are the plugins that Terraform uses to manage those resources. Every supported service or infrastructure platform has a provider that defines which resources are available and performs API calls to manage those resources.
