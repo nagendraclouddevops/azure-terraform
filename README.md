@@ -1,5 +1,5 @@
 **Azure-Terraform**
-### **1. what is terraform?**
+### **1. what is terraform?** <br />
 * Terraform is an open-source infrastructure as code (IaC) tool developed by HashiCorp. It allows developers and operations teams to define and manage infrastructure as code using a declarative language. With Terraform, you can define infrastructure resources such as servers, networks, storage, and other components required to run applications in the cloud or on-premises.
 
 * Terraform works by defining infrastructure resources in a configuration file, which is then used to create, update, or delete the resources in a cloud provider or on-premises environment. It uses a state file to keep track of the current infrastructure state and changes made to it.
@@ -11,7 +11,7 @@
 * Overall, Terraform is a powerful tool that helps organizations achieve greater agility and efficiency by automating infrastructure management and reducing manual errors.
 
 
-###  **2.Why Terraform** <br />
+###  **2.Why Terraform ?** <br />
 
 Terraform is popular IaC (Infrastructure as a Code) tool. It is best in the market now.
 
@@ -58,6 +58,8 @@ Terraform is popular IaC (Infrastructure as a Code) tool. It is best in the mark
 * AWS CLI V2: https://releases.hashicorp.com/terraform/1.4.6/terraform_1.4.6_windows_386.zip
 * AZURE CLI : https://releases.hashicorp.com/terraform/1.4.6/terraform_1.4.6_windows_386.zip
 
+
+
 **For AWS Steps:**
 
 * Create IAM administrator user. Copy the access key and secret key. Don't push to any GitHub or internet.
@@ -67,14 +69,32 @@ aws configure
 ```
 * Add the terraform path to system variables.
 
+
+
+
 **For Azure env setup**
 
-    * terraform file location paste in environment variables
-    * install az-cli and login to azure using `az -login`.
+* terraform file location paste in environment variables
+* install az-cli and login to azure using az -login.
+
+
+
+
+
 
 **Terraform Commands**
 
 * First command is to initialize the terraform, at this stage terraform downloads the provider into .terraform folder.
+
+***terraform init*** command is used to initialize a Terraform working directory. When you run terraform init, Terraform will perform the following tasks:
+
+* Download providers: If your Terraform configuration file references any cloud providers, terraform init will download and install the appropriate provider plugins. These plugins are used to interact with the cloud provider's APIs and perform resource management tasks.
+
+* Initialize backend: terraform init initializes the backend configuration, which is used to store and manage the state of the infrastructure resources. The backend can be local, remote, or encrypted storage.
+
+* Install modules: If your Terraform configuration file references any external modules, terraform init will download and install them in the .terraform/modules directory.
+
+* Create a lock file: terraform init creates a lock file named terraform.lock.hcl that lists the exact version of each provider and module required by the configuration file. This helps ensure that the same version of the provider and modules are used when running terraform apply or terraform plan to avoid any version conflicts.
 
 ```
 terraform init
